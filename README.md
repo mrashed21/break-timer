@@ -1,6 +1,6 @@
-# ⏱️ Break Timer – A VS Code Productivity Extension
+# ⏱️ Break Timer Pro – A VS Code Productivity Extension
 
-**Break Timer** is a lightweight yet powerful Visual Studio Code extension that helps developers stay healthy and productive by reminding them to take regular breaks while coding.
+**Break Timer Pro** is a lightweight yet powerful Visual Studio Code extension that helps developers stay healthy and productive by reminding them to take regular breaks while coding.
 
 If you're someone who spends long hours in front of the screen and often forgets to pause, this extension is designed just for you.
 
@@ -18,7 +18,7 @@ If you're someone who spends long hours in front of the screen and often forgets
 
 ## 🖼️ Logo
 
-![Break Timer Logo](./images/logo.png)
+![Break Timer Pro Logo](./images/logo.png)
 
 ---
 
@@ -26,7 +26,7 @@ If you're someone who spends long hours in front of the screen and often forgets
 
 ### Option 1: Install via VSIX
 
-1. Download the `.vsix` file [Break Timer](./break-timer-1.0.1.vsix).
+1. Download the `.vsix` file [Break Timer](./break-timer-pro-1.0.1.vsix).
 2. Open VS Code and press `Ctrl+Shift+P` or `Cmd+Shift+P` to open the **Command Palette**.
 3. Search for and select: **Extensions: Install from VSIX...**
 4. Choose the downloaded `.vsix` file.
@@ -35,10 +35,10 @@ ___
 
 or [ Download `Break Timer **.vsix` file and run the command ]
 ```
-vs-code: code --install-extension break-timer-1.0.1.vsix
+vs-code: code --install-extension break-timer-pro-1.0.1.vsix
 ```
 ```
-vs-codium: codium --install-extension break-timer-1.0.1.vsix
+vs-codium: codium --install-extension break-timer-pro-1.0.1.vsix
 ```
 
 ### Option 2: Build from Source

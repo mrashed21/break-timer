@@ -1,9 +1,9 @@
 {
-  "name": "break-timer",
-  "displayName": "Break Timer",
+  "name": "break-timer-pro",
+  "displayName": "Break Timer Pro",
   "description": "Track time in VS Code and get a break reminder every 50 minutes.",
   "version": "1.0.1",
-  "publisher": "your-name",
+  "publisher": "mrashed21",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.70.0"
