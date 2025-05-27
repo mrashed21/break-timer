@@ -26,7 +26,7 @@ If you're someone who spends long hours in front of the screen and often forgets
 
 ### Option 1: Install via VSIX
 
-1. Download the `.vsix` file [Break Timer Pro](./break-timer-pro-1.0.3.vsix).
+1. Download the `.vsix` file [Break Timer Pro](./break-timer-pro-1.0.2.vsix).
 2. Open VS Code and press `Ctrl+Shift+P` or `Cmd+Shift+P` to open the **Command Palette**.
 3. Search for and select: **Extensions: Install from VSIX...**
 4. Choose the downloaded `.vsix` file.
@@ -37,11 +37,11 @@ or [ Download `Break Timer **.vsix` file and run the command ]
 
 vs-code
 ```
-code --install-extension break-timer-pro-1.0.3.vsix
+code --install-extension break-timer-pro-1.0.2.vsix
 ```
 vs-codium
 ```
- codium --install-extension break-timer-pro-1.0.3.vsix
+ codium --install-extension break-timer-pro-1.0.2.vsix
 ```
 
 ### Option 2: Build from Source
