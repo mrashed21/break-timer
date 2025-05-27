@@ -20,24 +20,31 @@ If you're someone who spends long hours in front of the screen and often forgets
 
 ![Break Timer Logo](./images/logo.png)
 
-_Designed using AI – clean, minimal, and symbolic of a peaceful break._
-
 ---
 
 ## 💻 Installation
 
 ### Option 1: Install via VSIX
 
-1. Download the `.vsix` file from the [Releases](https://github.com/your-username/break-timer/releases) page.
+1. Download the `.vsix` file [Break Timer](./break-timer-1.0.1.vsix).
 2. Open VS Code and press `Ctrl+Shift+P` or `Cmd+Shift+P` to open the **Command Palette**.
 3. Search for and select: **Extensions: Install from VSIX...**
 4. Choose the downloaded `.vsix` file.
 5. Restart VS Code, and the timer will start automatically.
+___
+
+or [ Download `Break Timer **.vsix` file and run the command ]
+```
+vs-code: code --install-extension break-timer-1.0.1.vsix
+```
+```
+vs-codium: codium --install-extension break-timer-1.0.1.vsix
+```
 
 ### Option 2: Build from Source
 
 ```bash
-git clone https://github.com/your-username/break-timer.git
+git clone https://github.com/mrashed21/break-timer.git
 cd break-timer
 npm install
 npm run compile
