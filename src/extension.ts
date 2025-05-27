@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 
-let interval: ReturnType<typeof setInterval> | undefined;
+let mainInterval: ReturnType<typeof setInterval> | undefined;
+let breakInterval: ReturnType<typeof setInterval> | undefined;
 let seconds = 0;
 
 export function activate(context: vscode.ExtensionContext) {
@@ -12,14 +13,20 @@ export function activate(context: vscode.ExtensionContext) {
   statusBar.tooltip = "Time since VS Code opened";
   statusBar.show();
 
-  interval = setInterval(() => {
+  mainInterval = setInterval(() => {
     seconds++;
     statusBar.text = getTimeDisplay();
 
+    // Every 50 minutes (3000 seconds)
     if (seconds % 3000 === 0) {
       vscode.window.showWarningMessage(
-        "⏳ 50 minutes passed! Please take a break."
-      );
+        "⏳ 50 minutes passed! Please take a break for 5 minutes.",
+        "Start Break"
+      ).then((selection) => {
+        if (selection === "Start Break") {
+          startBreakCountdown();
+        }
+      });
     }
   }, 1000);
 
@@ -27,9 +34,8 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-  if (interval) {
-    clearInterval(interval);
-  }
+  if (mainInterval) clearInterval(mainInterval);
+  if (breakInterval) clearInterval(breakInterval);
 }
 
 function getTimeDisplay(): string {
@@ -41,4 +47,24 @@ function getTimeDisplay(): string {
     .padStart(2, "0");
   const s = (seconds % 60).toString().padStart(2, "0");
   return `⏱️ ${h}:${m}:${s}`;
+}
+
+function startBreakCountdown() {
+  let breakSeconds = 300; // 5 minutes
+
+  vscode.window.showInformationMessage("🚶 Break started: 5 minutes countdown!");
+
+  breakInterval = setInterval(() => {
+    breakSeconds--;
+
+    const m = Math.floor(breakSeconds / 60).toString().padStart(2, "0");
+    const s = (breakSeconds % 60).toString().padStart(2, "0");
+
+    vscode.window.setStatusBarMessage(`🧘 Break Time: ${m}:${s}`, 1000);
+
+    if (breakSeconds <= 0) {
+      clearInterval(breakInterval);
+      vscode.window.showInformationMessage("✅ Break over! You can start working again.");
+    }
+  }, 1000);
 }
